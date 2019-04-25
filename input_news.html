@@ -5,23 +5,7 @@
     <input type="button" value="ok" onclick="showElement();">
     <h1>新聞入力ツール</h1s>
     <p>日付</p>
-        <script>
-            var dt = new Date();
-            var y = dt.getFullYear();
-            var m = ("00" + (dt.getMonth()+1)).slice(-2);
-            var d = ("00" + dt.getDate()).slice(-2);
-            var result = y + m + d;
-            document.write(result); 
-
-            function showElement(){
-    
-                var ele2 = document.getElementById('id02').textContent;
-                var ele=result+ele2
-                document.write(ele); 
-            }
-        </script>
-    
-
+        <script src=input_news.js></script>
     <p>新聞
     <select id="id02" name="新聞">
         <option value="1">日刊工業新聞</option>
