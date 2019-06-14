@@ -2,19 +2,36 @@
     <title>新聞入力ツール</title>
 </head>
 <body>
-    <input type="button" value="ok" onclick="showElement();">
-    <h1>新聞入力ツール</h1s>
-    <p>日付</p>
-        <script src=input_news.js></script>
-    <p>新聞
-    <select id="id02" name="新聞">
-        <option value="1">日刊工業新聞</option>
-        <option value="2">日本経済新聞</option>
-        <option value="3">讀賣新聞</option>
-        <option value="4">電気新聞</option>
-        <option value="5">日経産業新聞</option>
-    </select></p>
-    <p>見出し <input type="text" name="Title" id="id03"></p>
-    <p>内容　 <textarea name="kanso" id="id04" rows="4" cols="40"></textarea></p>
-    <button onclick="joint()">結合</button>
+    <p><u>日付</u></p>
+    <p><script src=input_news.js></script></p>
+    <p ><u>業界</u></p>
+    <select id="Industry">
+        <option value="[電力関係]">[電力関係]</option>
+        <option value="[経済産業省]">[経済産業省]</option>
+        <option value="[通信関係]">[通信関係]</option>
+        <option value="[スマートメータ関係]">[スマートメータ関係]</option>
+        <option value="[業務効率化]">[業務効率化]</option>
+        <option value="[業界動向]">[業界動向]</option>
+        <option value="[セキュリティ]">[セキュリティ]</option>
+        <option value="[材料・部品関係]">[材料・部品関係]</option>
+    </select>
+    <p><u>新聞</u></p>
+    <select id="news_name">
+        <option value="日刊工業新聞">日刊工業新聞</option>
+        <option value="日本経済新聞">日本経済新聞</option>
+        <option value="讀賣新聞">讀賣新聞</option>
+        <option value="電気新聞">電気新聞</option>
+        <option value="日経産業新聞">日経産業新聞</option>
+    </select>
+    <p><u>見出し</u></p>
+    <p><input type="text" name="Title" id="Heading"></p>
+    <p\><u>内容</u></p>
+    <p><textarea id="Contents" rows="4" cols="40"></textarea></p>
+    <!-- <input type="button" value="結合" onclick=input_news.js>/> -->
+    <p></p><button id="btn">結合</button></p>
+
+    <p\><u>出力結果</u></p>
+        <p><textarea id="id05" rows="10" cols="80"></textarea></p>
 </body>
+
+<!--リスト内のすべてが足される-->
