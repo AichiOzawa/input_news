@@ -7,6 +7,7 @@ window.onload = function(){
     var m = ("00" + (dt.getMonth()+1)).slice(-2);//月>06 #getMonthは0を1月なので+1
     var d = ("00" + dt.getDate()).slice(-2);//日>16
     date = y + m + d;
+    date_md=m+"/"+d+"の新聞分です。"+"\n";
     var div=document.getElementById('date_tag')
     div.innerHTML=date;
 }
@@ -22,8 +23,8 @@ document.getElementById("btn").onclick = function(){
     var n_names=n_name.options;
     var head=document.getElementById("Heading");//見出し
     var head_txt=head.value//見出しの値
-    var cont = document.getElementById( "Contents");//内容
-    var cont_txt="\n"+cont.value
+    var cont = document.getElementById( "Contents");//内容Ｓ
+    var cont_txt="\n"+"・・・"+cont.value
 
     //選んだ業界のみ取得
     for (var indu_sel="",i=0,l=Indus.length; l>i;i++){
@@ -39,8 +40,15 @@ document.getElementById("btn").onclick = function(){
     }
  
      //結合
-     var out=indu_sel+date+n_names_sel+"「"+head_txt+"」"+cont_txt;
+     var out=date_md+indu_sel+date+n_names_sel+"「"+head_txt+"」"+cont_txt;
  
      //出力
      document.getElementById("out").textContent = out;
+     document.getElementById("Filename").textContent = date+"(新聞)";
  }
+
+ //今後の改良予定_20191009
+ //日付のカウントアップ、ダウン
+ //新聞とWEBの選択
+ //2つ入力を可能に
+ //色とか良い感じに
