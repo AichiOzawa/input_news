@@ -21,24 +21,11 @@ $(function () {
     let cont = $("#cont").val(); //見出し
 
     //結合
-    var out =
-      date_md +
-      indu +
-      "\n" +
-      date +
-      news +
-      "「" +
-      head +
-      "」" +
-      "\n" +
-      "・・・" +
-      cont;
+    var out = date_md + indu + "\n" + date + news + "「" + head + "」" + "\n" + "・・・" + cont;
 
     //出力
-    //document.getElementById("out").textContent = out;
     $("#out").val(out);
     $("#Filename").val(date + "(新聞)");
-    //document.getElementById("Filename").textContent = date + "(新聞)";
   });
 });
 
