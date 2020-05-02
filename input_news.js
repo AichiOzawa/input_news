@@ -14,17 +14,20 @@ window.onload = function () {
 $(function () {
   // HTMLタグの取得＋結合
   $("#btn").click(function () {
+
     //HTMLタグの取得
-    let indu = $("#indu").val();
-    let news = $("#news").val();
+    let indu = $("#indu").val(); //業界
+    let news = $("#news").val(); //新聞名
     let head = $("#head").val(); //見出し
-    let cont = $("#cont").val(); //見出し
+    let cont = $("#cont").val(); //内容
 
     //結合
     var out = date_md + indu + "\n" + date + news + "「" + head + "」" + "\n" + "・・・" + cont;
 
     //出力
-    $("#out").val(out);
+    $("#out").val(out);//
+
+    //フォルダの名前用
     $("#Filename").val(date + "(新聞)");
   });
 });
